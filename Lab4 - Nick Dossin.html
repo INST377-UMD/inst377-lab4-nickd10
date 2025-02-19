@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Lab4 JS practice work</title>
+    </head>
+
+    <body>
+        <h1 id="word">This element will change colors</h1>
+        <button onclick="changeColor()">Change the color</button>
+
+        <!-- Javascript Code -->
+        <script type="text/javascript">
+            function changeColor() {
+                console.log("Attempting to change color of text, current color is: ", document.getElementById("word").style.color)
+
+                if(document.getElementById("word").style.color == 'red') {
+                    document.getElementById("word").style.color = 'black';
+                } else {
+                    document.getElementById("word").style.color = 'red';
+                }
+
+                console.log("Successfully changed color of text, new color is: ", document.getElementById("word").style.color)
+            }
+
+            
+            console.log(h1Element)
+        </script>
+    </body>
+</html>
