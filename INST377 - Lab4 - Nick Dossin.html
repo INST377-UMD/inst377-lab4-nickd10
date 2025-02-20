@@ -6,11 +6,11 @@
         <link rel="stylesheet" href="INST377 - Lab4 - Stylesheet.css">
     </head>
 
-    <body>
+    <body id="body">
         <!-- Header -->
-         <header>
-            <h1>INST377 - Lab4</h1>
-         </header>
+        <header>
+            <h1 id="header">INST377 - Lab4</h1>
+        </header>
 
          <!-- Main text Area -->
           <div class="main-container">
@@ -18,12 +18,12 @@
                 <form>
                     <label>Name: </label>
                     <input type="text" id="name">
-                    <button>Alert Me!</button>
+                    <button id="toggleButton">Alert Me!</button>
                 </form>
             </div>
 
             <div class="section changeColorSection">
-                <button>Change Color</button>
+                <button type="button" onclick="changeColor()">Change Color</button>
             </div>
 
             <div class="section textTesterSection">
@@ -40,6 +40,29 @@
             </div>
 
           </div>
+
+        <script type="text/javascript">
+            function changeColor() {
+                if(document.body.style.backgroundColor == 'lightblue') {
+                    document.body.style.backgroundColor = 'green';
+                } else {
+                    document.body.style.backgroundColor = 'lightblue';
+                }
+            }
+
+            function alertMe() {
+
+            }
+
+            function textTester() {
+
+            }
+
+            function addText () {
+                
+            }
+
+        </script>
 
     </body>
 </html>
