@@ -1,3 +1,26 @@
 body {
     background-color: rgb(108, 146, 217);
 }
+
+.maincontainer {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping of elements */
+    gap: 10px; /* Space between boxes */
+    justify-content: space-between; /* Distributes space between elements */
+    align-items: center; /* Vertically centers elements */
+    height: 100vh; /* Full viewport height */
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+.section {
+    width: 50%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    border: 5px solid #000;
+}
