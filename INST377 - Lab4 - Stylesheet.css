@@ -14,13 +14,26 @@ body {
 }
 
 .section {
-    width: 50%;
-    height: 100px;
+    width: 45%;
+    height: 8%;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 18px;
-    font-weight: bold;
     color: white;
-    border: 5px solid #000;
+    border: 5px solid white;
+    background-color: purple;
+    border-radius: 15px;
+}
+
+.changeColorSection {
+    float: right;
+}
+
+.textTesterSection {
+    float: right;
+}
+
+.alertMeSection{
+    
 }
