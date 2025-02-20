@@ -15,10 +15,10 @@
          <!-- Main text Area -->
           <div class="main-container">
             <div class="section alertMeSection">
-                <form>
+                <form name="alertMeName">
                     <label>Name: </label>
-                    <input type="text" id="name">
-                    <button id="toggleButton">Alert Me!</button>
+                    <input type="text" id="alertName">
+                    <button id="toggleButton" onclick="alertMe()">Alert Me!</button>
                 </form>
             </div>
 
@@ -36,7 +36,7 @@
             </div>
 
             <div class="section addTextSection">
-                <button>Add Text</button>
+                <button onclick="addText()">Add Text</button>
             </div>
 
           </div>
@@ -51,6 +51,7 @@
             }
 
             function alertMe() {
+                alert('Hi! ' + document.alertMeName.alertName.value)
 
             }
 
@@ -58,8 +59,8 @@
 
             }
 
-            function addText () {
-                
+            function addText() {
+                document.getElementById("header").innerHTML += "- Adding Text"
             }
 
         </script>
