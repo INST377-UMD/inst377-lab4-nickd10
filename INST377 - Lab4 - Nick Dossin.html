@@ -27,10 +27,10 @@
             </div>
 
             <div class="section textTesterSection">
-                <form>
+                <form name="textValidation">
                     <label>Text Tester: </label>
                     <input type="text" id="testingText">
-                    <button>Validate Text</button>
+                    <button onclick="textTester()">Validate Text</button>
                 </form>
                 
             </div>
@@ -52,10 +52,14 @@
 
             function alertMe() {
                 alert('Hi! ' + document.alertMeName.alertName.value)
-
             }
 
             function textTester() {
+                var validation = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
+                if(validation.test(document.textValidation.testingText.value) == true) {
+                    alert("You can not input a Special Character")
+                }
+
 
             }
 
