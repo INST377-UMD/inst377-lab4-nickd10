@@ -36,7 +36,7 @@
             </div>
 
             <div class="section addTextSection">
-                <button onclick="addText()">Add Text</button>
+                <button id="textAdd" onclick="addText()">Add Text</button>
             </div>
 
           </div>
@@ -51,9 +51,13 @@
             }
 
             function alertMe() {
-                alert('Hi! ' + document.alertMeName.alertName.value)
+                if(document.alertMeName.alertName.value.trim() == "") {
+                    return false 
+                } else {
+                    alert('Hi! ' + document.alertMeName.alertName.value)
+                }
             }
-
+            
             function textTester() {
                 var validation = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
                 if(validation.test(document.textValidation.testingText.value) == true) {
@@ -64,7 +68,7 @@
             }
 
             function addText() {
-                document.getElementById("header").innerHTML += "- Adding Text"
+                    document.getElementById("header").innerHTML += "- Adding Text"
             }
 
         </script>
