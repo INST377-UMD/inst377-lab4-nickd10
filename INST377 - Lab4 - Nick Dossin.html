@@ -1,0 +1,77 @@
+<html>
+    <head>
+        <title>
+            Nick Dossin - Lab4
+        </title>
+        <link rel="stylesheet" href="INST377 - Lab4 - Stylesheet.css">
+    </head>
+
+    <body id="body">
+        <!-- Header -->
+        <header>
+            <h1 id="header">INST377 - Lab4</h1>
+        </header>
+
+         <!-- Main text Area -->
+          <div class="main-container">
+            <div class="section alertMeSection">
+                <form name="alertMeName">
+                    <label>Name: </label>
+                    <input type="text" id="alertName">
+                    <button id="toggleButton" onclick="alertMe()">Alert Me!</button>
+                </form>
+            </div>
+
+            <div class="section changeColorSection">
+                <button type="button" onclick="changeColor()">Change Color</button>
+            </div>
+
+            <div class="section textTesterSection">
+                <form name="textValidation">
+                    <label>Text Tester: </label>
+                    <input type="text" id="testingText">
+                    <button onclick="textTester()">Validate Text</button>
+                </form>
+                
+            </div>
+
+            <div class="section addTextSection">
+                <button id="textAdd" onclick="addText()">Add Text</button>
+            </div>
+
+          </div>
+
+        <script type="text/javascript">
+            function changeColor() {
+                if(document.body.style.backgroundColor == 'lightblue') {
+                    document.body.style.backgroundColor = 'green';
+                } else {
+                    document.body.style.backgroundColor = 'lightblue';
+                }
+            }
+
+            function alertMe() {
+                if(document.alertMeName.alertName.value.trim() == "") {
+                    return false 
+                } else {
+                    alert('Hi! ' + document.alertMeName.alertName.value)
+                }
+            }
+            
+            function textTester() {
+                var validation = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
+                if(validation.test(document.textValidation.testingText.value) == true) {
+                    alert("You can not input a Special Character")
+                }
+
+
+            }
+
+            function addText() {
+                    document.getElementById("header").innerHTML += "- Add Text"
+            }
+
+        </script>
+
+    </body>
+</html>

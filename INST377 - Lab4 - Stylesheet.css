@@ -1,0 +1,38 @@
+body {
+    background-color: lightblue;
+}
+
+
+.section {
+    width: 45%;
+    height: 8%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    color: white;
+    border: 5px solid white;
+    background-color: purple;
+    border-radius: 15px;
+}
+
+.changeColorSection {
+    position: relative;
+    left: 1000px;
+    bottom: 90px;
+}
+
+.textTesterSection {
+    position: relative;
+    bottom: 50px;
+}
+
+.alertMeSection{
+    position: relative;
+}
+
+.addTextSection {
+    position: relative;
+    left: 1000px;
+    bottom: 140px;
+}
